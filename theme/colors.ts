@@ -1,0 +1,23 @@
+export const colors = {
+  transparent: 'transparent',
+  background: '#1E1F28',
+  dark: '#2A2C36',
+  gray: '#ABB4BD',
+  ordinaryText: '#F5F5F5',
+  error: '#FF2424',
+  white: '#F6F6F6',
+  primary: '#EF3651',
+
+  // primary: '#53B175',
+  secondaryV1: '#5383EC',
+  secondaryV2: '#4A66AC',
+  light: '#FFFFFF',
+  darkV1: '#030303',
+  darkV2: '#181725',
+  greyV1: '#828282',
+  greyV2: '#E2E2E2',
+  greyV3: '#7C7C7C',
+  greyV4: '#F2F3F2',
+  greyV5: '#F0F0F0',
+  greyV6: '#B3B3B3',
+};

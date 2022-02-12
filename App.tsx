@@ -26,6 +26,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import MainStack from './screens/main-stack';
+import {StorageProvider} from './components/Storage';
+import { colors } from './theme/colors';
 
 const Section: React.FC<{
   title: string;
@@ -63,9 +66,14 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={[backgroundStyle, styles.container]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
+      <View style={styles.container}>
+        <StorageProvider>
+          <MainStack />
+        </StorageProvider>
+      </View>
+      {/* <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
@@ -88,12 +96,13 @@ const App = () => {
           </Section>
           <LearnMoreLinks />
         </View>
-      </ScrollView>
+      </ScrollView> */}
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {flex: 1, backgroundColor: colors.background},
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
